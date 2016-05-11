@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Dilooapp</title>
+	<link rel="import" href="layout/layout.html">
+</head>
+<body>
+	<main id="login">
+		<form class="ui form">
+			<img src="../assets/img/logo.png">
+			<div class="field">
+				<input type="email" placeholder="Email" required>
+			</div>
+			<div class="field">
+				<div class="ui icon input">
+					<input type="password" name="passwd" placeholder="Contraseña" required>
+					<i class="icon link	hide"></i>
+				</div>
+			</div>
+			<button class="ui button yellow" type="submit">Ingresar</button>
+		</form>
+	</main>
+	<script type="text/javascript">
+		document.querySelector(".hide").addEventListener('click',function(){
+		show();
+	})
+		function show(){
+			var box = document.querySelector("[name='passwd']") ;
+			var attr = box.getAttribute('type');
+			if(attr=== "password"){
+				box.setAttribute('type','text')
+			}else{
+				box.setAttribute('type','password')
+			}
+		}
+</script>
+</body>
+</html>
